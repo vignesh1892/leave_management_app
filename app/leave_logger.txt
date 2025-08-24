@@ -1,0 +1,65 @@
+2025-08-24 10:13:57,607 - [INFO] - Fetching all leaves
+2025-08-24 10:13:57,712 - [INFO] - package: mysql.connector.plugins
+2025-08-24 10:13:57,713 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 10:13:57,715 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 10:13:57,808 - [INFO] - Database connection established
+2025-08-24 10:13:57,876 - [INFO] - Fetched 5 leaves
+2025-08-24 10:23:43,016 - [INFO] - Fetching all leaves
+2025-08-24 10:23:43,244 - [INFO] - Database connection established
+2025-08-24 10:23:43,328 - [INFO] - Fetched 5 leaves
+2025-08-24 10:28:16,285 - [INFO] - Fetching all leaves
+2025-08-24 10:28:16,377 - [INFO] - package: mysql.connector.plugins
+2025-08-24 10:28:16,380 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 10:28:16,382 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 10:28:16,476 - [INFO] - Database connection established
+2025-08-24 10:28:16,543 - [INFO] - Fetched 5 leaves
+2025-08-24 10:28:16,554 - [INFO] - Fetched 5 leaves
+2025-08-24 10:29:47,538 - [ERROR] - Request error while applying leaves: 404 Client Error: Not Found for url: http://127.0.0.1:8000/add_expense
+2025-08-24 10:30:16,730 - [INFO] - User exited the program
+2025-08-24 10:30:33,897 - [INFO] - Fetching all leaves
+2025-08-24 10:30:34,056 - [INFO] - Database connection established
+2025-08-24 10:30:34,121 - [INFO] - Fetched 5 leaves
+2025-08-24 10:30:34,131 - [INFO] - Fetched 5 leaves
+2025-08-24 10:30:53,342 - [ERROR] - Request error while applying leaves: 404 Client Error: Not Found for url: http://127.0.0.1:8000/add_expense
+2025-08-24 10:50:05,618 - [ERROR] - Request error while applying leaves: 404 Client Error: Not Found for url: http://127.0.0.1:8000/add_expense
+2025-08-24 10:51:47,424 - [ERROR] - Request error while applying leaves: 404 Client Error: Not Found for url: http://127.0.0.1:8000/add_expense
+2025-08-24 10:52:20,937 - [INFO] - User exited the program
+2025-08-24 10:52:44,963 - [INFO] - package: mysql.connector.plugins
+2025-08-24 10:52:44,963 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 10:52:44,985 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 10:52:45,109 - [INFO] - Database connection established
+2025-08-24 10:52:45,274 - [ERROR] - Error inserting leave: 'MySQLCursor' object has no attribute 'commit'
+2025-08-24 10:52:45,455 - [INFO] - Database connection established
+2025-08-24 10:52:45,554 - [INFO] - Fetched 5 leaves
+2025-08-24 10:55:52,609 - [INFO] - Inserting leaves
+2025-08-24 10:55:52,717 - [INFO] - package: mysql.connector.plugins
+2025-08-24 10:55:52,718 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 10:55:52,719 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 10:55:52,835 - [INFO] - Database connection established
+2025-08-24 10:55:53,002 - [INFO] - Inserted leave: Personal Leave, Vignesh, 2025-08-24, leave=1
+2025-08-24 10:55:53,018 - [INFO] - Applied leaves: {'description': 'Personal Leave', 'empname': 'Vignesh', 'date': '2025-08-24', 'leave_id': 1}
+2025-08-24 10:59:06,878 - [INFO] - User exited the program
+2025-08-24 11:00:12,340 - [INFO] - Fetching all leaves
+2025-08-24 11:00:12,520 - [INFO] - Database connection established
+2025-08-24 11:00:12,577 - [INFO] - Fetched 5 leaves
+2025-08-24 11:06:47,485 - [INFO] - Fetching all leaves
+2025-08-24 11:06:47,650 - [INFO] - Database connection established
+2025-08-24 11:06:47,740 - [INFO] - Fetched 5 leaves
+2025-08-24 11:07:13,828 - [INFO] - Fetching all leaves
+2025-08-24 11:07:13,927 - [INFO] - package: mysql.connector.plugins
+2025-08-24 11:07:13,927 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 11:07:13,930 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 11:07:14,024 - [INFO] - Database connection established
+2025-08-24 11:07:14,090 - [INFO] - Fetched 5 leaves
+2025-08-24 11:09:45,231 - [INFO] - Fetching all leaves
+2025-08-24 11:09:45,395 - [INFO] - Database connection established
+2025-08-24 11:09:45,462 - [INFO] - Fetched 5 leaves
+2025-08-24 11:19:08,442 - [INFO] - Fetching all leaves
+2025-08-24 11:19:08,656 - [INFO] - package: mysql.connector.plugins
+2025-08-24 11:19:08,657 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 11:19:08,661 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 11:19:08,827 - [INFO] - Database connection established
+2025-08-24 11:19:08,915 - [INFO] - Fetched 5 leaves
+2025-08-24 11:19:24,755 - [INFO] - Fetching all leaves
+2025-08-24 11:19:25,022 - [INFO] - Database connection established
+2025-08-24 11:19:25,146 - [INFO] - Fetched 5 leaves

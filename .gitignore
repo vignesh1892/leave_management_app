@@ -1,0 +1,18 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder
+Expense_management_app-DB_API-\venv\
+
+# Ignore virtual environment folder
+venv/
+
+# Ignore log files
+*.log
+
+# Ignore environment variables file
+.env
+
+# Ignore temporary files
+*.tmp
