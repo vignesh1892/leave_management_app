@@ -1,184 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leave Management System</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f4f8;
-        color: #333;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    h2 { text-align: center; color: #0056b3; }
-
-    /* Tabs */
-    .tab {
-        overflow: hidden;
-        border-bottom: 2px solid #0056b3;
-        background-color: #e0ebf7;
-        margin-bottom: 20px;
-    }
-
-    .tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 20px;
-        transition: 0.3s;
-        font-size: 16px;
-        color: #0056b3;
-    }
-
-    .tab button:hover {
-        background-color: #cce0f4;
-    }
-
-    .tab button.active {
-        background-color: #0056b3;
-        color: white;
-    }
-
-    .tabcontent {
-        display: none;
-        padding: 10px 0;
-        background-color: #ffffff;
-        border: 1px solid #cce0f4;
-        border-top: none;
-        border-radius: 4px;
-    }
-
-    label { display: block; margin: 10px 0 5px; }
-    input, button { padding: 8px; width: 100%; margin-top: 5px; }
-    button { background-color: #0056b3; color: white; border: none; cursor: pointer; }
-    button:hover { background-color: #003f7f; }
-
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background-color: #cce0f4; }
-
-    .message { margin-top: 10px; color: green; }
-    .error { color: red; }
-</style>
+    <title>Leave Management - Inceptez</title>
+    <style>
+        /* === Theme === */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #eef2f3;  /* softer background */
+        }
+        header {
+            background: #0066cc;   /* blue header */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background: #004080;   /* darker blue */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            padding: 8px;
+            width: 250px;
+            margin-top: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+            display: block;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #d9e6f2;
+        }
+        .delete-link {
+            color: red;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .message { margin-top: 10px; color: green; }
+        .error { color: red; }
+    </style>
 </head>
 <body>
+<header>Leave Management</header>
+<nav>
+    <a href="#" onclick="showSection('add')">Apply Leave</a>
+    <a href="#" onclick="showSection('view')">View Leaves</a>
+</nav>
 
-<h2>Leave Management System</h2>
+<!-- Apply Leave -->
+<section id="add" class="active">
+    <h2>Apply Leave</h2>
+    <form id="leaveForm">
+        <label>Employee Name:</label>
+        <input type="text" id="empname" required>
+        <label>Description:</label>
+        <input type="text" id="description" required>
+        <label>Date (YYYY-MM-DD):</label>
+        <input type="date" id="date" required>
+        <label>Leave Type:</label>
+        <select id="leave_id" required></select>
+        <button type="submit">Apply Leave</button>
+    </form>
+    <p id="status"></p>
+</section>
 
-<div class="tab">
-  <button class="tablinks active" onclick="openTab(event, 'ApplyLeave')">Apply Leave</button>
-  <button class="tablinks" onclick="openTab(event, 'ViewLeaves')">View Leaves</button>
-</div>
-
-<!-- Apply Leave Tab -->
-<div id="ApplyLeave" class="tabcontent" style="display:block;">
-    <label>Description:
-        <input type="text" id="description" placeholder="Enter description">
-    </label>
-    <label>Employee Name:
-        <input type="text" id="empname" placeholder="Enter your name">
-    </label>
-    <label>Date (YYYY-MM-DD):
-        <input type="date" id="date">
-    </label>
-    <label>Leave ID (optional):
-        <input type="number" id="leave_id" placeholder="Leave ID">
-    </label>
-    <button onclick="applyLeave()">Apply Leave</button>
-    <p id="apply-message" class="message"></p>
-</div>
-
-<!-- View Leaves Tab -->
-<div id="ViewLeaves" class="tabcontent">
-    <button onclick="getLeaves()">Fetch Leaves</button>
-    <table id="leaves-table">
+<!-- View Leaves -->
+<section id="view">
+    <h2>Leaves Types</h2>
+    <table id="leavesTable">
         <thead>
-            <tr><th>ID</th><th>Name</th></tr>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+            </tr>
         </thead>
         <tbody></tbody>
     </table>
-    <p id="fetch-message" class="message"></p>
-</div>
+    <button onclick="loadLeaves()">Refresh</button>
+</section>
 
 <script>
-const BASE_URL = "http://localhost:5000"; // Replace with your backend URL
+    const API_URL = "http://127.0.0.1:8000"; // your backend URL
 
-// Tab switching
-function openTab(evt, tabName) {
-    const tabcontent = document.getElementsByClassName("tabcontent");
-    for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    function showSection(id) {
+        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+        if (id === "add") loadLeaveTypes();
     }
 
-    const tablinks = document.getElementsByClassName("tablinks");
-    for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Apply Leave
-function applyLeave() {
-    const description = document.getElementById("description").value;
-    const empname = document.getElementById("empname").value;
-    const date = document.getElementById("date").value;
-    let leave_id = document.getElementById("leave_id").value;
-    leave_id = leave_id ? parseInt(leave_id) : null;
-
-    const payload = { description, empname, date, leave_id };
-
-    fetch(`${BASE_URL}/add_leave`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("apply-message").textContent = "Leave applied successfully!";
-        console.log("Applied:", data);
-    })
-    .catch(err => {
-        const msg = document.getElementById("apply-message");
-        msg.textContent = "Failed to apply leave.";
-        msg.classList.add("error");
-        console.error("Error:", err);
-    });
-}
-
-// Fetch Leaves
-function getLeaves() {
-    fetch(`${BASE_URL}/get_leaves`)
-    .then(res => res.json())
-    .then(data => {
-        const tbody = document.querySelector("#leaves-table tbody");
-        tbody.innerHTML = "";
-        if (!data || data.length === 0) {
-            document.getElementById("fetch-message").textContent = "No leaves found.";
-            return;
-        }
-        data.forEach(leave => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `<td>${leave.id || "-"}</td><td>${leave.name || "-"}</td>`;
-            tbody.appendChild(tr);
+    // Load leave types
+    function loadLeaveTypes() {
+        fetch(`${API_URL}/get_leaves`)
+        .then(res => res.json())
+        .then(data => {
+            const select = document.getElementById("leave_id");
+            select.innerHTML = "";
+            data.forEach(lv => select.innerHTML += `<option value="${lv.id}">${lv.name}</option>`);
         });
-        document.getElementById("fetch-message").textContent = `Fetched ${data.length} leaves.`;
-    })
-    .catch(err => {
-        const msg = document.getElementById("fetch-message");
-        msg.textContent = "Failed to fetch leaves.";
-        msg.classList.add("error");
-        console.error("Error:", err);
-    });
-}
-</script>
+    }
 
+    // Apply Leave
+    document.getElementById("leaveForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = {
+            empname: document.getElementById("empname").value,
+            description: document.getElementById("description").value,
+            date: document.getElementById("date").value,
+            leave_id: parseInt(document.getElementById("leave_id").value)
+        };
+        fetch(`${API_URL}/add_leave`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(() => {
+            document.getElementById("status").innerText = "Leave applied!";
+            this.reset();
+            loadLeaveTypes();
+            loadLeaves();
+        })
+        .catch(() => document.getElementById("status").innerText = "Error applying leave");
+    });
+
+    // View Leaves
+    function loadLeaves() {
+        fetch(`${API_URL}/get_leaves`)
+        .then(res => res.json())
+        .then(data => {
+            const tbody = document.querySelector("#leavesTable tbody");
+            tbody.innerHTML = "";
+            data.forEach(lv => {
+                tbody.innerHTML += `<tr>
+                    <td>${lv.id}</td>
+                    <td>${lv.name}</td>
+                </tr>`;
+            });
+        });
+    }
+
+    // Initial load
+    loadLeaveTypes();
+    loadLeaves();
+</script>
 </body>
 </html>

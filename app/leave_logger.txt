@@ -56,3 +56,51 @@
 2025-08-24 11:09:45,462 - [INFO] - Fetched 5 leaves
 2025-08-24 11:19:08,442 - [INFO] - Fetching all leaves
 2025-08-24 11:19:08,656 - [INFO] - package: mysql.connector.plugins
+2025-08-24 18:55:06,482 - [INFO] - Fetching all leaves
+2025-08-24 18:55:06,672 - [INFO] - package: mysql.connector.plugins
+2025-08-24 18:55:06,672 - [INFO] - plugin_name: mysql_native_password
+2025-08-24 18:55:06,703 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-08-24 18:55:06,818 - [INFO] - Database connection established
+2025-08-24 18:55:06,895 - [INFO] - Fetched 5 leaves
+2025-08-24 19:00:10,175 - [INFO] - Fetching all leaves
+2025-08-24 19:00:10,359 - [INFO] - Database connection established
+2025-08-24 19:00:10,431 - [INFO] - Fetched 5 leaves
+2025-08-24 19:00:21,463 - [INFO] - Fetching all leaves
+2025-08-24 19:00:21,779 - [INFO] - Database connection established
+2025-08-24 19:00:21,854 - [INFO] - Fetched 5 leaves
+2025-08-24 19:00:34,137 - [INFO] - Inserting leaves
+2025-08-24 19:00:34,295 - [INFO] - Database connection established
+2025-08-24 19:00:34,467 - [INFO] - Inserted leave: Test, Test, 2025-08-24, leave=1
+2025-08-24 19:00:34,505 - [INFO] - Fetching all leaves
+2025-08-24 19:00:34,678 - [INFO] - Database connection established
+2025-08-24 19:00:34,737 - [INFO] - Fetched 5 leaves
+2025-08-24 19:03:08,741 - [INFO] - Fetching all leaves
+2025-08-24 19:03:08,931 - [INFO] - Database connection established
+2025-08-24 19:03:09,010 - [INFO] - Fetched 5 leaves
+2025-08-24 19:03:14,684 - [INFO] - Fetching all leaves
+2025-08-24 19:03:14,849 - [INFO] - Database connection established
+2025-08-24 19:03:14,910 - [INFO] - Fetched 5 leaves
+2025-08-24 19:03:42,105 - [INFO] - Fetching all leaves
+2025-08-24 19:03:42,299 - [INFO] - Database connection established
+2025-08-24 19:03:42,388 - [INFO] - Fetched 5 leaves
+2025-08-24 19:18:50,879 - [INFO] - Fetching all leaves
+2025-08-24 19:18:51,086 - [INFO] - Database connection established
+2025-08-24 19:18:51,189 - [INFO] - Fetched 5 leaves
+2025-08-24 19:18:51,195 - [INFO] - Fetching all leaves
+2025-08-24 19:18:51,387 - [INFO] - Database connection established
+2025-08-24 19:18:51,464 - [INFO] - Fetched 5 leaves
+2025-08-24 19:18:55,771 - [INFO] - Fetching all leaves
+2025-08-24 19:18:55,961 - [INFO] - Database connection established
+2025-08-24 19:18:56,038 - [INFO] - Fetched 5 leaves
+2025-08-24 19:19:00,636 - [INFO] - Fetching all leaves
+2025-08-24 19:19:00,810 - [INFO] - Database connection established
+2025-08-24 19:19:00,881 - [INFO] - Fetched 5 leaves
+2025-08-24 19:19:49,162 - [INFO] - Fetching all leaves
+2025-08-24 19:19:49,357 - [INFO] - Database connection established
+2025-08-24 19:19:49,444 - [INFO] - Fetched 5 leaves
+2025-08-24 19:19:49,454 - [INFO] - Fetching all leaves
+2025-08-24 19:19:49,616 - [INFO] - Database connection established
+2025-08-24 19:19:49,694 - [INFO] - Fetched 5 leaves
+2025-08-24 19:19:51,127 - [INFO] - Fetching all leaves
+2025-08-24 19:19:51,287 - [INFO] - Database connection established
+2025-08-24 19:19:51,353 - [INFO] - Fetched 5 leaves
