@@ -56,10 +56,3 @@
 2025-08-24 11:09:45,462 - [INFO] - Fetched 5 leaves
 2025-08-24 11:19:08,442 - [INFO] - Fetching all leaves
 2025-08-24 11:19:08,656 - [INFO] - package: mysql.connector.plugins
-2025-08-24 11:19:08,657 - [INFO] - plugin_name: mysql_native_password
-2025-08-24 11:19:08,661 - [INFO] - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
-2025-08-24 11:19:08,827 - [INFO] - Database connection established
-2025-08-24 11:19:08,915 - [INFO] - Fetched 5 leaves
-2025-08-24 11:19:24,755 - [INFO] - Fetching all leaves
-2025-08-24 11:19:25,022 - [INFO] - Database connection established
-2025-08-24 11:19:25,146 - [INFO] - Fetched 5 leaves
